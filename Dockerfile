@@ -13,4 +13,4 @@ RUN \
 VOLUME ["/app"]
 WORKDIR /app
 
-CMD ["/logstash/bin/logstash", "-f /app/logstash.conf"]
+CMD /logstash/bin/logstash -f /app/logstash.conf
