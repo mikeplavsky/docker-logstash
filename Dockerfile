@@ -9,3 +9,8 @@ RUN \
   tar xvzf $LS_PKG_NAME.tar.gz && \
   rm -f $LS_PKG_NAME.tar.gz && \
   mv /$LS_PKG_NAME /logstash
+
+VOLUME ["/app"]
+WORKDIR /app
+
+CMD ["/logstash/bin/logstash", "-f /app/logstash.conf"]
